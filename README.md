@@ -1,1 +1,1 @@
-# task_Junior_Front-end_developer
+2020 © Come Back Agency. All Rights Reserved.

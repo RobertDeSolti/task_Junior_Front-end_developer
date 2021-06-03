@@ -1,0 +1,213 @@
+.header {
+	position: absolute;
+	z-index: 10;
+	width: 100%;
+	.before-header {
+		background: rgba(0, 0, 0, 0.31);
+		.bh-wrapper{
+			max-width: 1260px;
+			display: flex;
+			margin: 0 auto;
+			justify-content: flex-end;
+			align-items: center;
+			padding-top: 16px;
+			padding-bottom: 23px;
+		}
+		&__phones {
+			color: $white;
+			.phone1, .phone2 {
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 19.41px;
+				letter-spacing: -1.5%;
+			}
+			.phone2 {
+				margin-left: 47px;
+				margin-right: 83px;
+			}
+		}
+		&__social {
+			display: flex;
+			.slinks {
+				margin-left: 22px;
+				&-icons {
+					opacity: 0.7;
+					&:hover, &:focus{
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+	.wrapper {
+		max-width: 1280px;
+		height: 80px;
+		margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		color: $white;
+	}
+	&-burger{
+		display: none;
+	}
+	&-logo {
+		width: fit-content;
+	}
+	&-nav {
+		width: 682px;
+		&__menu {
+			display: flex;
+			padding-left: 0;
+			justify-content: space-between;
+			&-list {
+				font-family: 'Gilroy';
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 80px;
+				list-style: none;
+				position: relative;
+				a{
+					outline: 0;
+					color: $white;
+					text-decoration: none;
+					&::after{
+						content: ' ';
+						display: block;
+						position: inherit;
+						height: 3px;
+						bottom: 0;
+						left: 0;
+						background-color: $primary;
+						visibility: hidden;
+					}
+					&:hover{
+						color: $primary;
+						&::after{
+							visibility: visible;
+						}
+					}
+				}
+			}
+		}
+	}
+	&-btn {
+		width: 166px;
+		height: 37px;
+		border: solid 2px $primary;
+		color: $primary;
+		background: transparent;
+		padding: 8px 12px;
+		line-height: 19.81px;
+		font-size: 16px;
+		text-align: center;
+		cursor: pointer;
+		&:hover,&:focus{
+			background: $white;
+		}
+	}
+	@include breakpoint('large-desktop')  {
+		.bh-wrapper{
+			padding: 0 20px;
+		}
+		.wrapper{
+			padding: 0 20px;
+		}
+	}
+	@include breakpoint('tablet'){
+		.bh-wrapper{
+			padding: 0 20px;
+		}
+		.wrapper{
+			padding: 0 20px;
+		}
+		.header-nav{
+			background-color: $mYeal;
+			position: fixed;
+			top: 66px;
+			right: -100%;
+			width: 50%;
+			height: 100%;
+			opacity: 0.95;
+			transition: all 0.3s ease 0s;
+			&__menu{
+				flex-wrap: wrap;
+				flex-direction: column;
+				align-content: flex-end;
+				padding-right: 100px;
+			}
+		}
+		.header-nav.active{
+			right: 0;
+		}
+		.header-burger{
+			display: block;
+			position: relative;
+			width: 30px;
+			height: 20px;
+			span{
+				position: absolute;
+				background-color: $white;
+				left: 0;
+				top: 9px;
+				width: 100%;
+				height: 2px;
+				transition: all 0.3s ease 0s;
+			}
+			&::before, &::after{
+				content: '';
+				position: absolute;
+				background-color: $white;
+				width: 100%;
+				height: 2px;
+				left: 0;
+				transition: all 0.3s ease 0s;
+			}
+			&::before{
+				top: 0;
+			}
+			&::after{
+				bottom: 0;
+			}
+			
+		}
+		.header-burger.active{
+			span{
+				display: none;
+			}
+			&::before{
+				transform: rotate(45deg);
+				top: 9px;
+			}
+			&::after{
+				transform: rotate(-45deg);
+				bottom: 9px;
+			}
+		}
+	}
+	@include breakpoint('mobile-large'){
+		.header-nav{
+			width: 60%;
+			top: 85px;
+		}
+	}
+}
+@include breakpoint('mobile-large'){
+	.header{
+		&-nav{
+			width: 60%;
+		}
+		.before-header{
+			.bh-wrapper{
+				flex-direction: column;
+			}
+			&__phones{
+				.phone2{
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}

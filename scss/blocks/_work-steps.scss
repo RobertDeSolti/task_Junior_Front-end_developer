@@ -1,0 +1,143 @@
+.work-steps {
+	z-index: 10;
+	background-color: $black;
+	margin-bottom: 100px;
+	.ws-container {
+		padding: 65px 170px 126px 170px;
+		max-width: 1440px;
+		margin: 0 auto;
+	}
+	&__title {
+		margin-bottom: 8px;
+		.title {
+			color: $primary;
+			font-size: 18px;
+			line-height: 25.09px;
+			letter-spacing: 9.7px;
+			text-transform: uppercase;
+		}
+	}
+	&__subtitle {
+		margin-bottom: 96px;
+		.subtitle {
+			color: $white;
+			font-family: 'PlayfairDisplay';
+			font-weight: 400;
+			font-size: 40px;
+			line-height: 55.76px;
+			letter-spacing: 0.2px;
+		}
+	}
+	&__steps {
+		display: flex;
+		justify-content: space-between;
+		.step {
+			&-number {
+				display: block;
+				position: relative;
+				text-align: center;
+				border: solid 1px $white;
+				border-radius: 50px;
+				width: 66px;
+				height: 66px;
+				margin-bottom: 27px;
+				.number {
+					color: $white;
+					font-size: 40px;
+				}
+			}
+			.first, .second, .third, .fourth, .fifth, .sixth {
+				position: relative;	
+			}
+			.first::before{
+			position: absolute;
+			content: url(./img/Step1.svg);
+			top: -2px;
+			right: -14px;
+			height: 66px;
+			width: 66px;
+			}
+			.second::before{
+				position: absolute;
+				content: url(./img/Step2.svg);
+				top: -2px;
+				right: -18px;
+				height: 66px;
+				width: 66px;
+			}
+			.third::before{
+				position: absolute;
+				content: url(./img/Step3.svg);
+				top: -4px;
+				right: -18px;
+				height: 66px;
+				width: 66px;
+			}
+			.fourth::before{
+				position: absolute;
+				content: url(./img/Step4.svg);
+				top: -2px;
+				right: -4px;
+				height: 66px;
+				width: 66px;
+			}
+			.fifth::before{
+				position: absolute;
+				content: url(./img/Step5.svg);
+				top: -3px;
+				right: -1px;
+				height: 66px;
+				width: 66px;
+			}
+			.sixth::before{
+				position: absolute;
+				content: url(./img/Step6.svg);
+				top: -3px;
+				right: 0;
+				height: 66px;
+				width: 66px;
+			}
+			&-content {
+				max-width: 160px;
+				.content {
+					color: $white;
+					font-size: 16px;
+					line-height: 22.3px;
+					letter-spacing: 0.2px;
+				}
+			}
+		}
+	}
+	@include breakpoint('tablet'){
+		.ws-container{
+			padding: 40px 80px;
+		}
+		.work-steps__steps{
+			.step{
+				.content{
+					font-size: 15px;
+				}
+			}
+		}
+	}
+	@include breakpoint('mobile-large'){
+		.work-steps__subtitle{
+			margin-bottom: 40px;
+		}
+		.work-steps__steps{
+			flex-direction: column;
+			align-items: center;
+			.step{
+				display: flex;
+				flex-direction: column;
+    		align-items: center;
+    		flex-wrap: wrap;
+				text-align: center;
+				margin-bottom: 15px;
+			}
+			.step-content{
+				max-width: none;
+			}
+		}
+	}
+}

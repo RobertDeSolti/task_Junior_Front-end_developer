@@ -1,0 +1,157 @@
+.footer {
+	background-color: $black;
+	margin: 0 auto;
+	border-bottom:0.5px solid rgba(255, 255, 255, 0.29);
+	.ft-container {
+		display: flex;
+		max-width: 1196px;
+		padding-top: 114px;
+		padding-bottom: 140px;
+		margin: 0 auto;
+		flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+	}
+	&-logo {
+		&__img {
+			margin-bottom: 43px;
+		}
+		&__text {
+			max-width: 308px;
+			.content {
+				color: $white;
+				font-weight: 300;
+				font-size: 16px;
+				line-height: 25.51px;
+				letter-spacing: -0.7px;
+			}
+		}
+	}
+	&-nav {
+
+		&__menu {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			&-link {
+				margin-bottom: 23px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+				.link {
+					outline: 0;
+					color: $white;
+					text-decoration: none;
+					font-weight: 400;
+					font-size: 16px;
+					line-height: 19.2px;
+					&:hover,&:focus{
+						color: $ltGray;
+					}
+				}
+			}
+		}
+	}
+	&-info {
+		color: $white;
+		&__adress {
+			margin-bottom: 43px;
+			.adress {
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 19.2px;
+				span{
+					font-weight: 700;
+					line-height: 19.81px;
+				}
+			}
+		}
+		&__phone {
+			.phone {
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 19.2px;
+			}
+		}
+	}
+	&-social {
+		&__links {
+			margin-bottom: 21px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+			.icon {
+				opacity: 0.5;
+				&:hover, &:focus{
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+.footer-tm{
+	background-color: $black;
+	.tm-wrapper{
+		max-width: 1196px;
+		margin: 0 auto;
+		padding-top:14px;
+		padding-bottom: 17px;
+	}
+	.tm{
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 16.8px;
+		color: $white;
+		opacity: .29;
+		user-select: none;
+	}
+}
+@include breakpoint('large-desktop'){
+	.ft-container{
+		padding: 0 20px;
+	}
+	.tm-wrapper{
+		padding: 14px 20px;
+	}
+}
+@include breakpoint('tablet'){
+	.ft-container{
+		padding: 0 20px;
+	}
+	.tm-wrapper{
+		padding: 14px 20px;
+	}
+}
+	@include breakpoint('mobile-large'){
+		.footer{
+			.ft-container{
+				flex-direction: column;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				align-items: center;
+				align-content: center;
+				padding-bottom: 40px;
+			}
+			&-logo{
+				text-align: center;
+				text-align: -webkit-center;
+				margin-bottom: 20px;
+			}
+			&-nav{
+				text-align: center;
+				margin-bottom: 20px;
+			}
+			&-info{
+				text-align: center;
+				margin-bottom: 20px;
+			}
+			&-social{
+				display: flex;
+				flex-direction: row;
+				&__links{
+					margin-bottom: 0;
+					margin-left: 10px;
+				}
+			}
+		}
+}

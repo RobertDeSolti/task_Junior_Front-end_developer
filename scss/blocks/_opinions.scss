@@ -1,0 +1,131 @@
+.opinions {
+background: url(./img/bck_5.jpg) no-repeat;
+margin: 0 auto;
+	.op-container {
+		max-width: 766px;
+		min-height: 671px;
+		background: rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(26px);
+		margin: 0 auto;
+		text-align: center;
+	}
+	&-head {
+		padding-top: 75px;
+		&__title {
+			margin-bottom: 8px;
+			.title {
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 25.09px;
+				letter-spacing: 9.7px;
+				text-align: center;
+				color: $primary;
+				text-transform: uppercase;
+			}
+		}
+		&__subtitle {
+			padding-bottom: 76px;
+			.subtitle {
+				font-family: 'PlayfairDisplay';
+				font-weight: 400;
+				font-size: 40px;
+				line-height: 55.76px;
+				letter-spacing: 0.2px;
+				text-align: center;
+				color: $white;
+			}
+		}
+	}
+	&-carousel {
+		margin-bottom: 106px;
+		.opinions-carousel__slides {
+			max-width: 561px;
+			min-height: 164px;
+			margin: 0 auto;
+			.opinions-carousel__slides-opinion {
+				.opinoin {
+					font-weight: 300;
+					font-size: 16px;
+					line-height: 19.2px;
+					letter-spacing: 1%;
+					text-align: center;
+					margin-bottom: 7px;
+					color: $white;
+				}
+				.author {
+					font-weight: 400;
+					font-size: 20px;
+					line-height: 24.26px;
+					letter-spacing: -1.5%;
+					text-align: center;
+					color: $white;
+				}
+			}
+		}
+	}
+	&-navigation {
+		margin-top: 106px;
+		margin-bottom: 75px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.op-dot {
+		cursor: pointer;
+		height: 6px;
+		width: 6px;
+		margin-left: 23px;
+		line-height: 0;
+		background: rgba(196, 196, 196, 0.45);
+		border-radius: 50%;
+		display: inline-block;
+		}
+		.active, .op-dot:active{
+			background: $primary;
+			height: 9px;
+			width: 9px;
+		}
+		.prev, .next {
+			font-size: 30px;
+			line-height: 20px;
+			width: 12px;
+			height: 24px;
+			color: $white;
+			cursor: pointer;
+			user-select: none;
+		}
+		
+		.prev {
+			margin-right: 18px;
+			&:active{
+				color: $primary;
+			}
+		}
+		.next {
+			margin-left: 41px;
+			&:active{
+				color: $primary;
+			}
+		}
+	}
+		@include breakpoint('mobile-large'){
+			.opinions{
+				&-head{
+					padding-bottom: 0;
+					&__subtitle{
+						padding-bottom: 0;
+						margin-bottom: 40px;
+					}
+				}
+				&-carousel{
+					margin-bottom: 50px;
+					&__slides{
+						padding: 10px 10px;
+						min-height: 250px;
+					}
+				}
+				&-navigation{
+					margin-top: 0;
+				}
+			}
+	}
+}

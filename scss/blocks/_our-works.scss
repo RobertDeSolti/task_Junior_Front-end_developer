@@ -1,0 +1,220 @@
+@-webkit-keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+}
+
+@keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+}
+
+.our-works {
+	max-width: 1440px;
+	margin: 0 auto	;
+	.ow-container {
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+	}
+	&__head {
+		.head-title {
+			.title {
+				font-size: 18px;
+				font-weight: 400;
+				line-height: 25.09px;
+				letter-spacing: 9.7px;
+				text-align: center;
+				color: $primary;
+				text-transform: uppercase;
+			}
+		}
+		.head-subtitle {
+			margin-bottom: 38px;
+			.subtitle {
+				font-size: 40px;
+				font-weight: 400;
+				line-height: 55.76px;
+				letter-spacing: 0.2px;
+				text-align: center;
+				color: $black;
+			}
+		}
+	}
+	&__content {
+		display: flex;
+		.content__textblock {
+			width: 60%;
+			padding: 166px 120px 0 168px;
+			.project-name {
+				margin-bottom: 24px;
+				.name {
+					font-weight: 600;
+					font-size: 24px;
+					line-height: 33.46px;
+					letter-spacing: 0.2px;
+				}
+			}
+			.project-desciption {
+				margin-bottom: 29px;
+				.description {
+					max-width: 504px;
+					font-weight: 400;
+					font-size: 18px;
+					line-height: 25.09px;
+					letter-spacing: 0.2px;
+				}
+			}
+			.terms-and-data {
+				
+				.terms {
+					margin-bottom: 9px;
+					font-weight: 700;
+					font-size: 18px;
+					line-height: 25.09px;
+					letter-spacing: 0.2px;
+					span{
+						margin-left: 13px;
+						font-weight: 400;
+						font-size: 20px;
+						line-height: 27.88px;
+						letter-spacing: 0.2px;
+					}
+				}
+				.data {
+					font-weight: 700;
+					font-size: 18px;
+					line-height: 25.09px;
+					letter-spacing: 0.2px;
+					span{
+						margin-left: 13px;
+						font-weight: 400;
+						font-size: 20px;
+						line-height: 27.88px;
+						letter-spacing: 0.2px;
+					}
+				}
+			}
+		}
+	}
+	.content__carousel {
+		.carousel-slides {
+			display: flex;
+			flex-direction: row-reverse;
+			align-content: stretch;
+			align-items: stretch;
+			flex-wrap: nowrap;
+			&__my-slides{
+				width: 100%;
+			}
+			.column {
+				float: left;
+				width: 16.66%;
+				&:after {
+					content: "";
+					display: table;
+					clear: both;
+				}
+				.raw {
+					.demo {
+						opacity: 0.6;
+						&:hover {
+							opacity: 1;
+						}
+					}
+					.active{
+						opacity: 1;
+					}
+					.cursor {
+						cursor: pointer;
+					}
+				}
+			}
+		}
+		.carousel__navigation {
+			background-color: $mYeal;
+			height: 94px;
+			display: flex;
+			padding: 35px 77px 35px 119px;
+			justify-content: space-between;
+			/* Fading animation */
+			.fade {
+				-webkit-animation-name: fade;
+				-webkit-animation-duration: 1.5s;
+				animation-name: fade;
+				animation-duration: 1.5s;
+			}
+			.navigation-dots{
+				.dot {
+					cursor: pointer;
+					height: 15px;
+					width: 15px;
+					margin: 0 2px;
+					line-height: 0;
+					background: rgba(255, 255, 255, 0.45);
+					border-radius: 50%;
+					display: inline-block;
+					transition: background-color 0.6s ease;
+					width: 6px;
+					height: 6px;
+					margin-left: 23px;
+					&:first-child{
+						margin-left: 0;
+					}
+				}
+				.active, .dot:active{
+					background: #FFFFFF;
+					box-shadow: 0px 0px 4px rgba(255, 153, 0, 0.43);
+					width: 9px;
+					height: 9px;		
+				}
+			}
+			.navigation-arrows{
+				.next{
+					margin-left: 59px;
+				}
+				.prev, .next {
+					font-size: 30px;
+					line-height: 0;
+					width: 12px;
+					height: 24px;
+					color: $white;
+					cursor: pointer;
+					user-select: none;
+				}
+			}
+		}
+	}
+	@include breakpoint('large-desktop'){
+		.our-works__content{
+			.content__textblock{
+				padding: 0 20px;
+			}
+		}
+	}
+	@include breakpoint('tablet'){
+		.our-works__content{
+			.content__textblock{
+				padding: 0 20px;
+			}
+		}
+	}
+	@include breakpoint('mobile-large'){
+		.our-works__content{
+			flex-direction: column;
+			.content__textblock{
+				width: 100%;
+				margin-bottom: 10px;
+			}
+			.content__carousel{
+				.carousel-slides{
+					padding-left: 10px;
+					padding-right: 10px;
+				}
+				.carousel__navigation{
+					padding: 40px 50px;
+				}
+			}
+		}
+	}
+}
+

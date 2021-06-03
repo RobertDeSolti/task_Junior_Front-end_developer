@@ -1,0 +1,22 @@
+@import "global";
+@import "mixins";
+@import "colors";
+@import "icons";
+@import "fonts";
+@import "./blocks/header";
+@import "./blocks/banner-block";
+@import "./blocks/about-us";
+@import "./blocks/work-steps";
+@import "./blocks/our-works";
+@import "./blocks/opinions";
+@import "./blocks/contakt-form";
+@import "./blocks/footer";
+
+
+body {
+	font-family: 'Gilroy';
+	margin: 0 auto;
+	font-size: 18px;
+	color: $black;
+}
+

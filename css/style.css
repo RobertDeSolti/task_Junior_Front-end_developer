@@ -782,10 +782,6 @@ select {
   width: 100%;
 }
 
-.our-works .content__carousel .carousel-slides .column {
-  float: left;
-  width: 16.66%;
-}
 
 .our-works .content__carousel .carousel-slides .column:after {
   content: "";
@@ -793,19 +789,15 @@ select {
   clear: both;
 }
 
-.our-works .content__carousel .carousel-slides .column .raw .demo {
+.our-works .content__carousel .carousel-slides .column .row .demo {
   opacity: 0.6;
 }
 
-.our-works .content__carousel .carousel-slides .column .raw .demo:hover {
+.our-works .content__carousel .carousel-slides .column .row .active-img,.demo:hover {
   opacity: 1;
 }
 
-.our-works .content__carousel .carousel-slides .column .raw .active {
-  opacity: 1;
-}
-
-.our-works .content__carousel .carousel-slides .column .raw .cursor {
+.our-works .content__carousel .carousel-slides .column .row .cursor {
   cursor: pointer;
 }
 
@@ -822,8 +814,8 @@ select {
   /* Fading animation */
 }
 
-.our-works .content__carousel .carousel__navigation .fade {
-  -webkit-animation-name: fade-img;
+.fade {
+	-webkit-animation-name: fade-img;
   -webkit-animation-duration: 1.5s;
   animation-name: fade-img;
   animation-duration: 1.5s;
@@ -875,6 +867,7 @@ select {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+					transition: 0.6s ease;
 }
 
 .opinions {
@@ -998,6 +991,7 @@ select {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+					transition: 0.6s ease;
 }
 
 .opinions-navigation .prev {

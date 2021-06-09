@@ -23,17 +23,20 @@ function currentSlide(n) {
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("carousel-slides__my-slides");
-  var dots = document.getElementsByClassName("dot");
+  var spot = document.getElementsByClassName("demo");
+	var dot = document.getElementsByClassName("dot")
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+  for (i = 0; i < spot.length; i++) {
+      spot[i].className = spot[i].className.replace(" active-img", "");
+			dot[i].className = dot[i].className.replace(" active", "" );
   }
   slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  spot[slideIndex-1].className += " active-img";
+	dot[slideIndex-1].className += " active";
 }
 
 
@@ -53,7 +56,6 @@ function showOpinions(o) {
   var i;
   var opinion = document.getElementsByClassName("opinions-carousel__slides-opinion");
   var dots = document.getElementsByClassName("op-dot");
-	var captionText = document.getElementById("caption");
   if (o > opinion.length) {opinionIndex = 1}
   if (o < 1) {opinionIndex = opinion.length}
   for (i = 0; i < opinion.length; i++) {
@@ -64,4 +66,5 @@ function showOpinions(o) {
   }
   opinion[opinionIndex-1].style.display = "block";
   dots[opinionIndex-1].className += " active";
+	
 }

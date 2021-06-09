@@ -367,7 +367,6 @@ select {
 
 .banner .advantage {
   opacity: 0.78;
-  height: 169px;
   position: relative;
   background: rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(36px);
@@ -396,31 +395,32 @@ select {
 .banner .advantage-wrapper .third,
 .banner .advantage-wrapper .fourth,
 .banner .advantage-wrapper .fifth {
-  min-height: 92px;
+  min-width: 4.861vw;
+	min-height: 70px;
 }
 
 .banner .advantage-wrapper .first {
-  background: url(../img/business1.svg) no-repeat right;
+	background: url(../img/business1.svg) no-repeat center;
   background-size: contain;
 }
 
 .banner .advantage-wrapper .second {
-  background: url(../img/money-bag1.svg) no-repeat right;
+	background: url(../img/money-bag1.svg) no-repeat center;
   background-size: contain;
 }
 
 .banner .advantage-wrapper .third {
-  background: url(../img/business-report1.svg) no-repeat right;
+	background: url(../img/business-report1.svg) no-repeat center;
   background-size: contain;
 }
 
 .banner .advantage-wrapper .fourth {
-  background: url(../img/fast2.svg) no-repeat right;
-  background-size: contain;
+	background: url(../img/fast2.svg) no-repeat  center;
+	 background-size: contain;
 }
 
 .banner .advantage-wrapper .fifth {
-  background: url(../img/guarantee1.svg) no-repeat right;
+	background: url(../img/guarantee1.svg) no-repeat center;
   background-size: contain;
 }
 
@@ -428,6 +428,7 @@ select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+	padding-right: 25px;
 }
 
 .banner .advantage-wrapper__block .block-txt {
@@ -1386,8 +1387,12 @@ body {
     padding-right: 6.944vw;
   }
 
+	.about-us {
+		max-width: 370px;
+
+	}
+
   .about .about__picture {
-    margin-right: 2.778vw;
     width: 40%;
   }
 
@@ -1419,7 +1424,7 @@ body {
   .about .about-us__content .content {
     font-weight: 400;
     font-size: 0.889rem;
-    line-height: 1.394rem;
+    line-height: 1.3rem;
     letter-spacing: 0.2;
   }
 
@@ -1477,7 +1482,8 @@ body {
   .header .header-burger {
     display: block;
     position: relative;
-    width: 2.083vw;
+    width: 30px;
+		margin-right: 20px;
     height: 20px;
   }
 
@@ -1538,19 +1544,20 @@ body {
   }
 
   .banner .container .advantage-wrapper__block .block-txt {
-    font-size: 0.833rem;
+    font-size: 0.7rem;
+		line-height: 1.4rem;
     font-weight: 400;
   }
 
   .about .about__picture {
-    margin-right: 0;
-    width: 100%;
+		margin: 0 auto;
+		inline-size: fit-content;
     height: 100%;
   }
 
   .about .about-us {
     max-width: none;
-		padding: 10px;
+		padding: 40px;
   }
 
   .work-steps .ws-container {
@@ -1560,12 +1567,18 @@ body {
 	.work-steps .work-steps__steps {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: space-around;
+		padding: 35px;
 	}
 
+	.work-steps .work-steps__steps .first-step,
+	.work-steps .work-steps__steps .second-step,
+	.work-steps .work-steps__steps .third-step,
 	.work-steps .work-steps__steps .fourth-step,
 	.work-steps .work-steps__steps .fifth-step,
 	.work-steps .work-steps__steps .sixth-step {
-		margin-top: 10px;
+		text-align: center;
+		text-align: -webkit-center;
 	}
 
   .work-steps .work-steps__steps .step .content {

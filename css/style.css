@@ -1585,9 +1585,25 @@ body {
     font-size: 0.833rem;
   }
 
+	.our-works .our-works__content {
+		flex-direction: column;
+	}
+
   .our-works .our-works__content .content__textblock {
     padding: 0 1.389vw;
+		margin: 0 auto;
+		align-self: center;
+    text-align: center;
+		width: fit-content;
   }
+
+	.our-works .content__carousel .carousel-slides {
+		justify-content: center;
+	}
+
+	.our-works .content__carousel .carousel-slides__my-slides {
+		width: auto;
+	}
 
   .ft-container {
     padding: 0 1.389vw;
@@ -1713,6 +1729,10 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+
+	.our-works .our-works__content {
+		flex-direction: column;
+	}
 
   .our-works .our-works__content .content__textblock {
     width: 100%;

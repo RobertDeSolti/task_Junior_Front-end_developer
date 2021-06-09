@@ -465,7 +465,7 @@ select {
 }
 
 .about-us {
-  max-width: 37.639vw;
+  max-width: 36.639vw;
 }
 
 .about-us__title {
@@ -637,22 +637,22 @@ select {
   letter-spacing: 0.2px;
 }
 
-@-webkit-keyframes fade {
-  from {
-    opacity: .4;
+@-webkit-keyframes fade-img {
+  0% {
+    opacity: 0.4;
   }
 
-  to {
+  100% {
     opacity: 1;
   }
 }
 
-@keyframes fade {
-  from {
-    opacity: .4;
+@keyframes fade-img {
+  0% {
+    opacity: 0.4;
   }
 
-  to {
+  100% {
     opacity: 1;
   }
 }
@@ -823,9 +823,9 @@ select {
 }
 
 .our-works .content__carousel .carousel__navigation .fade {
-  -webkit-animation-name: fade;
+  -webkit-animation-name: fade-img;
   -webkit-animation-duration: 1.5s;
-  animation-name: fade;
+  animation-name: fade-img;
   animation-duration: 1.5s;
 }
 

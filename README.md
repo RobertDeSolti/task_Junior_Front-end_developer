@@ -1,1 +1,1 @@
-2020 © Come Back Agency. All Rights Reserved.
+Roman Hredil Tech Task
